@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>table</title>
+<!-- 이건아직몰라도댐 style -->
+    <style> 
+        table {
+            border-collapse: collapse;
+            width:80%;
+        } 
+        .w10{
+            width:10%
+        }
+
+        .w30{
+            width:30%
+        }
+    </style>
+</head>
+<body>
+    <h1>table</h1>
+    <!-- 검색이 잘되야함 (구성의 필요성) , 속도향상 -->
+    <!-- th: table heading -->
+    <!-- <caption>은 표형식인 <table> 요소내에서 사용된다.표맨위 제목이나 설명. -->
+    <!-- <figcaption>은 이미지나 도표 등의 콘텐츠를 나타내는 <figure> 요소 내에서 사용됩니다. -->
+        
+        <!-- ex) <figure>
+            <img src="example.jpg" alt="예제 이미지">
+            <figcaption>이미지 설명</figcaption>
+        </figure> -->
+
+    <figure>
+        <figcaption>
+            <h2>test table</h2>
+                <p>test table description</p>
+        </figcaption>
+        <table border="1">
+        <!-- <table border="1" width="80%"> -->
+                <!-- <colgroup>
+                    <col width="10%">
+                    <col width="30%">
+                    <col width="30%">
+                    <col width="30%"> 
+                    이렇게 직접 넣으면 안되어서  아래처럼 이름만 지어주고 head 탭에 스타일로 지정.(css에서 할것임)
+                    이렇게 하면 표 추가해도 같이 적용되어 좋음
+                </colgroup> -->
+                <colgroup>
+                    <col class="w10">
+                    <col class="w30">
+                    <col class="w30">
+                    <col class="w30">
+                </colgroup>
+
+            <!-- <caption>
+                <h2>test table</h2>
+                <p>test table description</p>
+            </caption> -->
+
+            <!-- row는 행(가로) col은 열(세로)임. 시각적으로 보이진 않지만 정보제공을 위해 나눔 -->
+            <thead>
+                <tr>
+                    <th scope="col">구분</th> <!-- table data-->
+                    <th scope="col">제목1</th>
+                    <th scope="col">제목2</th>
+                    <th scope="col">제목3</th>
+            </tr>
+            </thead> 
+            <tbody>
+                <tr>
+                    <th scope="row">1</th> 
+                    <td colspan="3">data 11</td>
+                    <!-- <td>data 12</td>
+                    <td>data 13</td> -->
+                </tr> 
+                <tr>
+                    <th scope="row">2</th> 
+                    <td rowspan="3">data 21</td>
+                    <td>data 22</td>
+                    <td>data 23</td>
+                </tr> 
+                <tr>
+                    <th scope="row">3</th> 
+                    <!-- <td>data 31</td> -->
+                    <td>data 32</td>
+                    <td>data 33</td>
+                </tr> 
+                <tr>
+                    <th scope="row">4</th> 
+                    <td>data 41</td>
+                    <td>data 42</td>
+                    <!-- <td>data 43</td> -->
+                </tr> 
+            </tbody>
+            <tfoot>
+                <tr>
+                    <th>합계</th> 
+                    <td>total 1</td>
+                    <td>total 2</td>
+                    <td>total 3</td>
+                </tr> 
+            </tfoot>
+        </table>
+    </figure>
+    <figure>
+        <figcaption>
+            <h2>test table</h2>
+                <p>test table description</p>
+        </figcaption>
+        <table border="1">
+        <!-- <table border="1" width="80%"> -->
+                <!-- <colgroup>
+                    <col width="10%">
+                    <col width="30%">
+                    <col width="30%">
+                    <col width="30%">
+                </colgroup> -->
+                <colgroup>
+                    <col class="w10">
+                    <col class="w30">
+                    <col class="w30">
+                    <col class="w30">
+                </colgroup>
+
+            <!-- <caption>
+                <h2>test table</h2>
+                <p>test table description</p>
+            </caption> -->
+
+            <!-- row는 행(가로) col은 열(세로)임. 시각적으로 보이진 않지만 정보제공을 위해 나눔 -->
+            <thead>
+                <tr>
+                    <th scope="col">구분</th> <!-- table data-->
+                    <th scope="col">제목1</th>
+                    <th scope="col">제목2</th>
+                    <th scope="col">제목3</th>
+            </tr>
+            </thead> 
+            <tbody>
+                <tr>
+                    <th scope="row">1</th> 
+                    <td colspan="3">data 11</td>
+                    <!-- <td>data 12</td>
+                    <td>data 13</td> -->
+                </tr> 
+                <tr>
+                    <th scope="row">2</th> 
+                    <td rowspan="3">data 21</td>
+                    <td>data 22</td>
+                    <td>data 23</td>
+                </tr> 
+                <tr>
+                    <th scope="row">3</th> 
+                    <!-- <td>data 31</td> -->
+                    <td>data 32</td>
+                    <td>data 33</td>
+                </tr> 
+                <tr>
+                    <th scope="row">4</th> 
+                    <td>data 41</td>
+                    <td>data 42</td>
+                    <!-- <td>data 43</td> -->
+                </tr> 
+            </tbody>
+            <tfoot>
+                <tr>
+                    <th>합계</th> 
+                    <td>total 1</td>
+                    <td>total 2</td>
+                    <td>total 3</td>
+                </tr> 
+            </tfoot>
+        </table>
+    </figure>
+</body>
+</html>

@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>form</title>
+</head>
+<body>
+<!-- 11_resister 파일은 임시. 원래는 백앤드 파일이어야함 -->
+<h1>회원가입</h1>
+<!-- method 에서 보안이 필요한것은 post로, 검색결과나 그런건 get으로 하면 됨4
+get은 주소표시줄  ?뒤에 입력값 노출됨 post는 노출 x
+-->
+    <form action="11_resister.html" method="post">
+       <fieldset>
+           <legend>필수입력</legend>
+           <p>
+           <label for="username">이름:</label>
+           <input type="text" name="username" minlength="2" id="username" required placeholder="이름을 입력하세요." autofocus>
+           </p>
+           <p>
+           <label for="usermail">이메일:</label>
+           <input type="email" name="usermail" id="usermail" required>
+           </p>
+           <p>
+           <label for="userpassword">비밀번호:</label>
+           <input type="password" name="userpw" id="userpw" pattern="[A-Aa-z][5]" required>
+           </p>
+           <p>
+           <input type="submit" value="전송하기">
+           </p>
+       </fieldset>
+
+    <fieldset>
+        <!-- 주소지,유입경로,관심사,인삿말.. -->
+        <legend>선택사항</legend>
+        <p> 
+        <label for="address">거주지</label>
+            <select name="address" id="address">
+            <option value="경기도"> 경기도 </option>
+            <option value="서울시"> 서울시 </option>
+            <option value="제주도"> 제주도 </option>
+        </select>
+        </p>
+        <!-- radio는 name이 같으면 하나만 체크되는데
+        checkbox는 name에 상관없이 다중체크가 가능함 -->
+        <p>
+         <span>방문경로:</span>
+            <label for="search">검색</label>
+            <input type="radio" name="방문경로" id="search" value="검색">
+            <label for="recommend">지인</label>
+            <input type="radio" name="방문경로" id="recommend" value="지인">
+            <label for="ad">광고</label>
+            <input type="radio" name="방문경로" id="ad" value="광고">
+        </p>
+
+        <p>
+        <span>관심사항</span>
+            <label for="itr_html">html</label>
+            <input type="checkbox" name="관심사" id="itr_html" value="html">
+            <label for="itr_css">css</label>
+            <input type="checkbox" name="관심사" id="itr_css" value="css">
+            <label for="itr_jv">html</label>
+            <input type="checkbox" name="관심사" id="itr_jv" value="jv">
+        </p>    
+        <p>
+            <span>인사말</span>
+            <textarea name="msg" id="msg" cols="30" rows="5"></textarea>
+        </p>
+    </fieldset>
+    <fieldset>
+        <legend>HTML 신 속성</legend>
+        <label for="userbirth">생년원일</label>
+        <!-- <input type="text" palceholoer=2000/01/01 (형식보여주기 가능. 그래도 막입력할순 있음) -->
+        <input type="date" id="userbirth">
+
+        <p>
+            <label for="usersearch">검색</label>
+            <input type="search" id="usersearch">
+        </p>
+        <p>
+            <label for="usertel">전화번호</label>
+            <input type="tel" id="usertel">
+        </p>
+        <p>
+            <label for="userurl">홈페이지</label>
+            <input type="url" id="userurl">
+        </p>
+        <p>
+            <label for="usercereer">경력</label>
+            <input type="number" id="usercereer" value="1" min="0" max="10" step="2">
+        </p>
+        <p>
+            <label for="range">숙련도</label>
+            <input type="range" id="range">
+        </p>
+        <p>
+            <label for="profile">프로필</label>
+            <input type="file" id="profile"
+        </p>
+        <p>
+            <label for="color">색상</label>
+            <input type="color" id="color">
+        </p>
+    </fieldset>
+    <p>
+        <!-- 
+        <input type="submit"value="전송">
+        <input type="reset"value="초기화"> 
+    </p>
+    <p>
+        <button type="submit">전송</button>
+        <button type="reset">초기화</button
+        -->
+        <input type="image"src="send.png"> 
+        <!-- input은 기본적으로 submit -->
+        <button type="submit"><img src="send.png" alt="send"></button>
+    </p>
+        
+<p>
+    <label for="langs">배우고 싶은 언어</label>
+    <input name="lang" id="langs" list="mylist">
+    <datalist id="mylist">
+        <option value="html">
+        <option value="css">
+        <option value="javascript">
+    </datalist>
+</p>
+      
+    
+    </form>
+</body>
+</html>
