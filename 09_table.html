@@ -61,11 +61,11 @@
             <!-- row는 행(가로) col은 열(세로)임. 시각적으로 보이진 않지만 정보제공을 위해 나눔 -->
             <thead>
                 <tr>
-                    <th scope="col">구분</th> <!-- table data-->
+                    <th scope="col">구분</th> <!-- 기본:td table data-->
                     <th scope="col">제목1</th>
                     <th scope="col">제목2</th>
                     <th scope="col">제목3</th>
-            </tr>
+                </tr>
             </thead> 
             <tbody>
                 <tr>
@@ -88,9 +88,9 @@
                 </tr> 
                 <tr>
                     <th scope="row">4</th> 
-                    <td>data 41</td>
                     <td>data 42</td>
-                    <!-- <td>data 43</td> -->
+                    <td>data 43</td>
+                    <!-- <td>data 41</td> -->
                 </tr> 
             </tbody>
             <tfoot>
@@ -103,75 +103,6 @@
             </tfoot>
         </table>
     </figure>
-    <figure>
-        <figcaption>
-            <h2>test table</h2>
-                <p>test table description</p>
-        </figcaption>
-        <table border="1">
-        <!-- <table border="1" width="80%"> -->
-                <!-- <colgroup>
-                    <col width="10%">
-                    <col width="30%">
-                    <col width="30%">
-                    <col width="30%">
-                </colgroup> -->
-                <colgroup>
-                    <col class="w10">
-                    <col class="w30">
-                    <col class="w30">
-                    <col class="w30">
-                </colgroup>
-
-            <!-- <caption>
-                <h2>test table</h2>
-                <p>test table description</p>
-            </caption> -->
-
-            <!-- row는 행(가로) col은 열(세로)임. 시각적으로 보이진 않지만 정보제공을 위해 나눔 -->
-            <thead>
-                <tr>
-                    <th scope="col">구분</th> <!-- table data-->
-                    <th scope="col">제목1</th>
-                    <th scope="col">제목2</th>
-                    <th scope="col">제목3</th>
-            </tr>
-            </thead> 
-            <tbody>
-                <tr>
-                    <th scope="row">1</th> 
-                    <td colspan="3">data 11</td>
-                    <!-- <td>data 12</td>
-                    <td>data 13</td> -->
-                </tr> 
-                <tr>
-                    <th scope="row">2</th> 
-                    <td rowspan="3">data 21</td>
-                    <td>data 22</td>
-                    <td>data 23</td>
-                </tr> 
-                <tr>
-                    <th scope="row">3</th> 
-                    <!-- <td>data 31</td> -->
-                    <td>data 32</td>
-                    <td>data 33</td>
-                </tr> 
-                <tr>
-                    <th scope="row">4</th> 
-                    <td>data 41</td>
-                    <td>data 42</td>
-                    <!-- <td>data 43</td> -->
-                </tr> 
-            </tbody>
-            <tfoot>
-                <tr>
-                    <th>합계</th> 
-                    <td>total 1</td>
-                    <td>total 2</td>
-                    <td>total 3</td>
-                </tr> 
-            </tfoot>
-        </table>
-    </figure>
+  
 </body>
 </html>
