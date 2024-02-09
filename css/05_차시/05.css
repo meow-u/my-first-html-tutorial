@@ -1,0 +1,41 @@
+/* 가져온 외부의 css를 직접 수정할수 없어 같은 아이디를
+.bx-wrapper 보다 아래에 써서 더 우선순위가 높아서 바꿀수 있음 */
+
+.bx-wrapper{
+    -webkit-box-shadow:none;
+    box-shadow:none;
+    border:2px solid silver;
+}
+.slide{
+    height: 300px;
+}
+
+
+/* 클래스명보다 아이디가 훨씬 우선순위높음 */
+/* !important는 우선순위 끝판왕 id,인라인보다 */
+#desc{
+    color:silver !important;
+}
+/* 클래스명+태그로 구체적이라 우선순위가 아래들보다 높음 */
+.main-content p{
+    color:red;
+}
+.main-content p{
+    color:violet;
+}
+/* 동일한 우선순위시 아래가 더 높다 */
+p{
+    color:blue;
+}
+p{
+    color:green
+}
+
+section h2{
+    font-size:40px;
+    /* font-style, font-weight... */
+}
+
+section h2{
+    font:bold;
+}

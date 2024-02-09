@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>background color</title>
+    <style>
+        div {
+            width: 300px;
+            border: 1px solid;
+            padding: 10px;
+            color: #fff;
+            font-weight: bold;
+            font-size: 1.5em;
+        }
+.bg1{
+    background-color: blue;
+}
+.bg2{
+    background-color: rgb(0,0,255);
+}
+.bg3{
+    background-color: rgba(0,0,255,0.5);
+    color:blue
+    /* 백그라운드 칼라의 투명도를 조절하는것 맨끝 a */
+}
+.bg4{
+    background-color: #0000ff;
+}
+
+.opacity {
+        opacity:0.5;
+        color:blue;
+        /* 요소 자체의 투명도를 조절하는것 배경+글씨 같이됨  */
+    }
+    </style>
+</head>
+
+<body>
+    <h1>background color</h1>
+    <div class="bg1">
+        blue
+    </div>
+    <div class="bg2">
+        rgb(0, 0, 255)
+    </div>
+    <div class="bg3">
+        rgba(0, 0, 255, .5)
+    </div>
+    <div class="bg4">
+        #00f
+    </div>
+    <div class="bg4 opacity">
+        #00f + opacity 50%
+    </div>
+   
+</body>
+
+</html>

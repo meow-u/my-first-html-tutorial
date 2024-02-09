@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Float</title>
+    <style>
+       h1{
+        /* float: left; */
+       }
+       span{
+        width:300px; 
+        background:#ccc;
+        /* 인라인요소인데 플롯을 거니까 적용시킨 너비가 잘 적용됨 */
+        /* float:right;  */
+    }
+    body > img{
+        float:left;
+    }
+    .clear{clear:left;}
+    /* 이렇게 따라오는 요소들을 다시 원래대로 돌리려면 부분에 아이디걸고 거기에 클리어(왼쪽으로 따라붙는것 그만해!) 하면 됨 */
+    .images{
+        width:340px;
+        margin:0 auto;
+    }
+    .images img{
+        margin-right:20px;
+        float:left;
+    }
+    .images img:last-of-type{
+        /* 이미지들 중에서 막내 */
+        margin-right:0;
+    }
+
+    .images span{
+        display: block;
+        clear:both;
+    }
+
+    .menu li{
+        float:left;
+        list-style:none;
+        background:#ccc;
+        margin-right:30px;
+    }
+
+/* 이거 진짜많이 씀.  다 가로배열이라 끝마다 플롯해제엄청함.
+아래와같이 해두고 클래스명에 필요시 추가하면 됨  */
+    .cf:after{
+    content:'';
+    clear:both;
+    display:block;
+}
+    </style>
+</head>
+
+<body>
+    <h1>Float</h1> 
+    <hr>    
+    <span>inline element</span>     
+    <hr>     
+    <img src="http://placehold.it/100x100" alt="">     
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+        <!-- 아래 br요소는 열고닫는 요소가 아니라서 cf로 콘텐츠를 만들어줄수 없음 그래서 불가피하게 그냥 clear로 따로지정함! -->
+    <br class="clear">Saepe vitae reprehenderit exercitationem praesentium tempora placeat quod illo sunt maxime aut necessitatibus sint ea officia ab, quaerat assumenda odio iste fuga?</p>     
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe vitae reprehenderit exercitationem praesentium tempora placeat quod illo sunt maxime aut necessitatibus sint ea officia ab, quaerat assumenda odio iste fuga?     
+    </p>
+    <!--
+        FLOAT이 적용된 요소가 해당 방향으로 이동한다. 
+        FLOAT이 적용된 요소의 크기는 content의 크기 만큼 인지된다. (블록요소,인라인요소도)
+        FLOAT이 적용된 요소를 뒤따라 오는 요소들이 감싼다.
+        자식 요소 모두 플롯이 적용되면, 부모요소의 높이가 잡히지 않는다.
+        감싸는 속성을 해지(clear)해야 뒤의 요소들을 다시 배치할 수 있다.
+        감싸는 속성을 해지(clear)해야 자식요소의 높이를 부모요소가 인지한다.
+    --> 
+    <hr>
+    <p class="images cf">
+        <img src="http://placehold.it/100x100" alt="">  
+        <img src="http://placehold.it/100x100" alt="">  
+        <img src="http://placehold.it/100x100" alt="">        
+
+        <span style="clear:both"></span>
+    </p>
+        <!-- 이렇게 아래처럼 빈태그로 무식하게 플롯을 없앨 필요없이
+    특정 클래스명에 플롯없애는걸 스타일에 추가해두면 댐 
+<style>
+.cf:after{
+    content:'';
+    clear:both;
+    display:block;
+}
+</style>
+-->
+    
+    <hr>
+     
+    <ul class="menu cf">
+        <li>
+            <a href="">menu 1</a>
+        </li> 
+        <li>
+            <a href="">menu 2</a>
+        </li> 
+        <li>
+            <a href="">menu 3</a>
+        </li> 
+        <!-- <div style="clear:both;"></div> 
+        ul의 자식요로소는 li만 올수 있어서 클리어 보스를 이렇게 걸면 안됨      -->
+    </ul>
+    <hr>
+</body>
+
+</html>

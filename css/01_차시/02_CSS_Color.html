@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS 기초</title>    
+    <style>
+        h1 {
+            color:blue;
+            font-size:20px;
+
+        }
+        H3 {
+            /* background-color:blue;
+            color:white; */
+            /* 같은값2글자는 한글자로 줄일 수 있음 00>0 ,ffffff>fff */
+           
+            /* background-color:#00ff;  
+            color:#fff; */
+
+            /* background-color:rgb(0,0,255,0.5);  
+            color:rgb(255,255,255); */
+
+            /* hsl에서 l는 50으로해야됨 빛이라 100%하면 흰색됨
+            포토샵과 표기다름 주의.  / 0.5 는 .5로 적어도됨 */
+            background-color:hsl(240,100%,50%,.5);  
+            color:rgb(255,255,255);
+        }
+    </style>    
+</head>
+<body>   
+    <h1>CSS 구조</h1>
+    <pre>
+        선택자: 요소를 선택
+        중괄호: 선언들을 작성한다.
+        선언: 속성:값 세미콜론(;) 구분된다.
+        예시: h1 {color:blue; font-size:16px;}
+    </pre>
+    <hr>
+    <h2>COLORS를 표현하는 다양한 방법</h2>
+    <pre>
+        색상명: blue
+        hex : #0000ff;
+        rgb : rgb(0,0,255);
+        rgba : rgba(0,0,255,0.2); (a는 투명도임 20%투명도)
+        hsl:hsl(240,100%,100%);
+        hsla:hsla(240,100%,100%,0.5);
+    </pre>
+    <h3>색상명</h3>
+
+</body>
+</html>

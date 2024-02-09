@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IR 기법</title>
+    <style>
+       h1 a{
+        background:url(img/logo.png) no-repeat;
+        width:87px;
+        height:87px;
+        text-indent:87px;
+        white-space:nowrap;
+        overflow:hidden;
+        display:block;
+       }
+
+
+        ul li{
+            list-style:none;
+            display:inline-block;
+
+        }
+
+       
+       ul li a{
+        background:url(img/sprite_icons.png)no-repeat;
+       width:42px;
+       height:42px;
+       display:block;
+       text-indent: -9999em;
+       }
+
+        ul li:nth-child(2) a{
+            background-position: -53px 0;
+        }
+        ul li:nth-child(3) a{
+            background-position: -105px 0;
+        }
+        ul li:nth-child(4) a{
+            background-position: 100% 0;
+        }
+/* 아래 주석처럼 짤 필요없이  포지션 y값만 호더시 이동시키면됨
+이게 페이지에서 많은 이미지들을 가장 보편적으로 활용하는 방법임 */
+
+        ul li a:hover{
+            background-position-y:-52px;
+        }
+/*     
+
+        ul li:nth-child(1) a:hover{
+            background-position: 0 -52px;
+        }
+        ul li:nth-child(2) a:hover{
+            background-position: -53px -52px;
+        }
+        ul li:nth-child(3) a:hover{
+            background-position: -105px -52px;
+        }
+        ul li:nth-child(4) a:hover{
+            background-position: 100% -52px;
+        }
+     */
+    </style>
+</head>
+
+<body>
+    <h1><a href="index.html">Sharp Logo</a></h1>
+
+    <hr>
+    <ul>
+        <li><a href="">Add Member</a></li>
+        <li><a href="">Mail to Member</a></li>
+        <li><a href="">Member information</a></li>
+        <li><a href="">Delete Memeber</a></li>
+    </ul>
+        
+</body>
+
+</html>

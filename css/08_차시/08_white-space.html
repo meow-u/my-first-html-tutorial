@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>white-space</title>
+    <style>
+        p {
+            width: 60%;
+            border: 1px solid #ccc;
+        }
+        p.nowrap {
+            white-space: nowrap;
+            /* 글씨테두리 벗어남 */
+        }
+        p.normal {
+            white-space: normal;
+        }
+        p.pre {
+            /* white-space: pre; 공백,엔터 그대로 틀벗어남 */
+            /* white-space: pre-wrap; 공백 그대로 틀에맞춤*/
+            white-space: pre-line;
+             /* 공백x 엔터만 유지해줌 */
+
+        }
+    </style>
+</head>
+
+<body>
+    <h2>white-space: nowrap:</h2>
+    <p class="nowrap">
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ad, culpa, quam praesentium libero velit maiores aut
+        ex dolorum, vel eaque repellendus. Veritatis fugit ullam nobis minima laudantium iure labore repellendus!
+    </p>
+
+    <h2>white-space: normal:</h2>
+    <p class="normal">
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ad, culpa, quam praesentium libero velit maiores aut
+        ex dolorum, vel eaque repellendus. Veritatis fugit ullam nobis minima laudantium iure labore repellendus!
+    </p>
+
+    <h2>white-space: pre:</h2>
+    <p class="pre">
+               Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+
+        Ad, culpa,          quam praesentium libero velit maiores aut
+        
+        ex dolorum, vel eaque repellendus. Veritatis fugit ullam nobis minima laudant   ium iure labore repellendus!
+    </p>
+</body>
+
+
+</html>

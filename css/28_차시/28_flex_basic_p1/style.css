@@ -1,0 +1,19 @@
+.wrap{
+	width: 500px;
+	margin:20px auto;
+
+}
+
+.wrap div{
+
+}
+.wrap div:first-child{
+	background:red;
+}
+.wrap div:nth-child(2){
+	background:blue;
+	color:#fff;
+}
+.wrap div:nth-child(3){
+	background:yellow;
+}

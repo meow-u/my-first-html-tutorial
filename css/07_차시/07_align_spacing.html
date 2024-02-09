@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>align and spacing</title>
+   
+    <style>
+        .right{
+            text-align:right;
+        }
+        .lefe{
+            text-align:left;
+        }
+        .center{
+            text-align: center;
+        }
+        .justify{
+            text-align: justify;
+            word-break: break-all;
+        }
+
+        h3{
+            letter-spacing:20px;
+            /* 글자와 글자사이 간격 */
+        }
+        h4{
+            word-spacing: 10px;
+            /* 단어와 단어사이 간격 */
+        }
+        p{
+            line-height:40px;
+        }
+
+        a{
+        background:#ccc;
+        height:40px;
+        display:inline-block;
+        padding:0 10px;
+
+        line-height:40px;  
+        /* 링크나버튼 안에서 높이안에서 글씨가 센터로 오게하고싶으면
+    이렇게 라인 하이트를 많이 씀 */
+    }
+    </style> 
+</head>
+<body>   
+    <h1>정렬과 간격</h1>    
+    <h2>정렬</h2>
+    <p class="right">right</p>
+    <p class="left">left</p>
+    <p class="center">center</p>
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tenetur voluptate aliquam tempora blanditiis nihil. Dolore odio vel architecto, totam, consequuntur iste reiciendis ab autem, sed quibusdam quae nobis impedit velit!</p>
+    <p class="justify">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tenetur voluptate aliquam tempora blanditiis nihil. Dolore odio vel architecto, totam, consequuntur iste reiciendis ab autem, sed quibusdam quae nobis impedit velit!</p>
+    <hr>
+    <h2>간격</h2>
+    <h3>letter spacing</h3>
+    <h4>word spacing</h4>
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tenetur voluptate aliquam tempora blanditiis nihil. Dolore odio vel architecto, totam, consequuntur iste reiciendis ab autem, sed quibusdam quae nobis impedit velit!</p>
+
+    <a href="">read more</a>
+   
+</body>
+</html>

@@ -1,0 +1,14 @@
+.wrap{
+	width: 500px;
+	margin:20px auto;
+	border:1px solid #3498db;
+}
+
+.wrap div{
+	background: #3498db;
+	color:#fff;
+	padding: 20px;
+}
+.wrap div:last-child{
+	
+}

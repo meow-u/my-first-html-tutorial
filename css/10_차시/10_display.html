@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>display</title> 
+<style>
+    span{
+        width: 50%;
+        /* 스팬태그가 인라인이라 너비 50%을 적용하지 못해서
+        블록요소로 바꿔줌 display:block */
+        display:block;
+        background: green;
+        color: #fff;
+    }
+    .box {
+        width: 50%;
+        background: #3498db;
+        color: #fff;
+        /* 블록요소성격이 사라져서 너비도 50%을 반영못함  */
+        display:inline;
+       
+    }
+    img{
+        width: 150px;
+    }
+    p{
+        text-align: center;
+    }
+    /* 이미지는 특이하게 
+    인라인,블럭 두가지 성격을 가지고있음 */
+    .menu li{
+        width: 150px;
+        padding: 10px;
+        background:#ebebeb;
+        line-height: 60px;
+        list-style:none;
+        display:inline-block;
+        /* display를 inline만 했을때는 width와 line height가 제대로
+    적용이 안됨. 따라서 inline-block으로 설정해야 나열되면서도 블록요소를 갖게 됨 */
+        text-align: center;
+    }
+    .portfolio{
+        background-color: #ebebeb;
+        padding:0;
+        display:table;
+        width:100%;
+    }
+    .portfolio li{
+        width:33.3333%;
+        background:silver;
+        list-style-type:none;
+        display:table-cell;
+    }
+    h2{
+        /* 아예존재않는것처럼표기 */
+        display:none;
+    }
+    h3{
+        /* 공간은 남겨두고 가림 */
+        visibility: hidden;
+    }
+    h4{
+        opacity:0;
+    }
+</style> 
+</head>
+<body> 
+    <header> 
+        <h1>Display</h1>         
+        <h2>Heading</h2>
+        <h3>Visibility</h3>        
+        <h4>Opacity</h4>         
+    </header> 
+
+    <div class="box">block level element</div>         
+    <div class="box">block level element</div>        
+    <span>inline level element</span>         
+    <span>inline level element</span>         
+    <hr> 
+    <p>
+        <img src="http://placehold.it/100x100" alt="">         
+        <img src="http://placehold.it/100x100" alt="">         
+    </p>
+    <hr> 
+sprite_icons
+    <ul class="menu">         
+        <li>menu1</li>         
+        <li>menu2</li>        
+        <li>menu3</li>        
+    </ul> 
+
+    <ul class="portfolio">         
+        <li>portfolio item1</li>
+        <li>portfolio item2</li>
+        <li>portfolio item3</li>
+    </ul> 
+</body>
+</html>

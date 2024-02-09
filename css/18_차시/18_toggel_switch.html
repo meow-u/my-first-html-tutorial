@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Toggle Switch</title>
+    <style>
+      .toggle {
+        margin: 100px auto;
+        display: block;
+        text-align: center;
+      }
+
+      label {
+        cursor: pointer;
+        text-indent: -9999px;
+        width: 100px;
+        height: 50px;
+        background-color: rgb(230, 252, 255);
+        border-radius: 25px;
+        display: inline-block;
+        position: relative;
+        transition: 0.4s;
+      }
+      label:after {
+        content: "";
+        position: absolute;
+        width: 42px;
+        height: 42px;
+        border-radius: 50%;
+        background-color: rgb(179, 240, 240);
+        left: 4px;
+        top: 4px;
+        transition: 1s;
+      }
+      #toggle-slider:checked + label {
+        background: rgb(100, 197, 246);
+      }
+
+      #toggle-slider:checked + label:after {
+        left: 50px;
+        background-color: rgb(255, 255, 43);
+      }
+
+      /* input[type="checkbox"] {
+        position: absolute;
+        opacity: 0;
+        pointer-events: none;
+	} */
+	
+	#toggle-slider{
+		display: none;
+	}
+    </style>
+  </head>
+
+  <body>
+    <p class="toggle">
+      <input type="checkbox" id="toggle-slider" />
+      <label for="toggle-slider">On/Off</label>
+    </p>
+  </body>
+</html>

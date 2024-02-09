@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Position exercise2</title>
+    <style>
+      .answer {
+        background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/485050/positon_btn_final.png)
+          no-repeat;
+        width: 363px;
+        height: 197px;
+        margin-bottom: 50px;
+      }
+      .lastest-news {
+        width: 300px;
+        padding: 20px;
+        border: 2px solid #ccc;
+        margin-top: 50px;
+        position: relative;
+      }
+      .read-more {
+        position: absolute;
+        background-color: black;
+        color: #fff;
+        padding: 5px;
+        text-decoration: none;
+        right: 0;
+        /* top:-31px; 
+        이렇게하면 요소 크기바뀌어 변경할일 생김 */
+        bottom: calc(100% + 10px);
+        /* margin-bottom: 10px; 
+        이렇게 줘도 됨 */
+        font-size: 1.2em;
+
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="answer"></div>
+    <div class="lastest-news">
+      <ul>
+        <li>리스트 1</li>
+        <li>리스트 2</li>
+        <li>리스트 3</li>
+        <li>리스트 4</li>
+        <li>리스트 5</li>
+      </ul>
+      <a href="#" class="read-more">Read more</a>
+    </div>
+  </body>
+</html>

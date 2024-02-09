@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selector 4</title>    
+    <style>
+/* 일반구조선택자 (아래처럼 , 로 여러개 한번에쓸수있음) */
+      ul li:first-child,
+      ul li:last-child{
+        text-decoration: underline;
+      }
+      /* 특정 순서 */
+      ul li:nth-child(3){
+        text-decoration: underline; 
+        color:blue;
+      }
+      /* 특정규칙 (짝수,홀수 일떄) */
+      /* li:nth-child(2n){
+        background-color: silver;
+
+        li:nth-child(2n+1){
+        background-color: silver;
+      } 
+      
+      even 짝수
+      odd 홀수
+      n은 0이 기준임*/
+   
+      /* li:nth-child(even){
+        background-color: silver;
+      }
+      li:nth-child(odd){
+        background-color: silver;
+      } */
+
+      /* 3번째 이상으로 */
+      /* li:nth-child(n+3){
+            background-color:silver
+            
+      } */
+      /* 5번쨰 이하로 */
+      /* li:nth-child(-n+5){
+            background-color:silver
+
+      } 
+        3째 이상 5째 이하*/
+      li:nth-child(n+3):nth-child(-n+5){
+        background-color: silver;
+      }
+
+/* 형태구조선택자 */
+/* 같은 종류들 중에 첫번째 선택
+    h3:first-child 로는 지정이 안됨
+    body입장에서는 h3이 첫번째 자식이 아니기때문
+    
+    위 n으로 했던것들과 비슷하게 가능*/
+      h3:first-of-type{
+        background-color: silver;
+      }
+      h3:nth-of-type(2){
+        background-color: silver;
+      }
+    /* 비활성화 입력창 에 스타일 */
+      input:disabled {
+        border-color: red;
+      }
+    /* radio나 checked 자체를 바꿀수 없으니 
+    라벨과 연결해서 라벨에 스타일태그를 걸음 */
+      input:checked+label{
+        background-color: silver;
+      }
+/*부정 선택자  */
+    /* h2뺴고 전부.  section * 섹션전부 h2 뺴고 */
+      section *:not(h2){
+        color:green;
+      }
+    /* list 클래스의 li에서 첫번쨰 자식 빼고 */
+      .list li:not(:first-child){
+        color:red;
+      }
+    </style>    
+</head>
+<body>   
+    <h1>CSS selector</h1>
+    <h2>일반 구조 선택자</h2>
+    <ul>
+        <li>list item1</li>
+        <li>list item2</li>
+        <li>list item3</li>
+        <li>list item4</li>
+        <li>list item5</li>
+        <li>list item6</li>
+    </ul>
+    <hr>
+
+    <h2>형태 구조 선택자</h2>
+    <h3>subtitle</h3>
+    <h3>subtitle</h3>
+    <h3>subtitle</h3>
+    <div>container</div>
+    <h3>subtitle</h3>
+    <h3>subtitle</h3>
+    <h3>상태 선택자</h3>
+    <form action="">
+<!-- 사용불가능하게 설정 -->
+        <input type="text" disabled>
+        <input type="text">
+
+    <input type="radio" id="radio">
+    <label for="radio">radio</label>
+        
+    <input type="checkbox" id="check">
+    <label for="check">check</label>
+<!-- 사용불가능하게 설정 -->
+        <button type="submit" disabled>전송</button>
+        <button type="reset">초기화</button>
+    </form>
+    <h3>부정 선택자</h3>
+    <section>
+        <h2>section title</h2>
+        <p>description</p>
+        <a href="">read more</a>
+        <img src="http://placehold.it/100x100" alt="">
+    </section>
+    <ul class="list">
+        <li>list item</li>
+        <li>list item</li>
+        <li>list item</li>
+        <li>list item</li>
+        <li>list item</li>
+    </ul>
+    <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci, ipsum ducimus natus incidunt placeat modi ipsa ullam voluptatem rem, hic sint commodi quisquam consequatur tenetur accusantium quod nesciunt temporibus quam.
+    </p>
+    <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci, ipsum ducimus natus incidunt placeat modi ipsa ullam voluptatem rem, hic sint commodi quisquam consequatur tenetur accusantium quod nesciunt temporibus quam.
+    </p>
+
+</body>
+</html>

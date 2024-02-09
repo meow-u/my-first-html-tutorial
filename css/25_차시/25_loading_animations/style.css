@@ -1,0 +1,16 @@
+* {
+  box-sizing: border-box;
+}
+
+.wrapper {
+  max-width: 50rem;
+  width: 100%;
+  margin: 5rem auto 15rem auto;
+  text-align: center;
+}
+.spinner{
+  position: relative;
+  width: 6rem;
+  height: 6rem;
+  margin:6rem auto; 
+}

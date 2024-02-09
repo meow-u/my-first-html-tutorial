@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>transition 속성1</title>
+  <style>
+    /* 
+    transiton-property 전환 할 속성
+    transiton-duration 전환 지속시간
+    tranditon-delay 전환 시작  딜레이
+     */
+   .box{
+    width: 100px;
+    height: 100px;
+    background-color: silver;
+    /* width랑 height 둘다적을거면 콤마써서 해야 트렌지션따로적용잘됨 */
+   
+    /* 모든 속성을 적용할거면 속성 width height 쓸필요 없이
+    all 입력하면 해당 속성 다적용 됨 */
+    
+    /* property속성의 값은 수치로 번경되는것만 전환효과가 작동한다 */ 
+    /*    transition-property: background;
+    transition-duration: 1s;
+
+    1>2  >1
+    */
+    transition-property: all;
+    transition-duration: 2s;
+    transition-delay: 0;
+
+  }
+  /* 효과를 양방향 적용하려면 해당 요소에 직접 트렌지션 적으면 되고,
+  호버시에만 적용하려면 호버에만(다시 돌아오는건 액션없음),
+  양방향 다른효과 적요하려면 둘다 적으면0 됨  */
+
+  .box:hover{
+    width: 200px;
+    height: 200px;
+    /* background-color: green;
+    
+    1>2 , 2>1 x 
+     */
+
+/*     transition-property: all;
+    transition-duration: 1s;
+    transition-delay: 0.5s; */
+  }
+
+  /* 
+  transition-timing-function: 
+  ease-in 시작이 느리고 끝이 빠름, 
+  ease-out 시작이 빠르고 끝이 느림, 
+  ease-in-out 시작과 끝이 느림 (중간만 빠름);
+
+  https://cubic-bezier.com/   (직접제작)
+  https://easings.net/ko  (이미있는것)
+   */
+   figure img{
+    width: 200px;
+    height: 200px;
+
+
+    /* transition-property: width;
+    transition-duration: 1s;
+    transition-delay; 0.5s
+    transition-timing-function: cubic-bezier(0.68, -0.6, 0.32, 1.6); */
+  
+    transition: width 1s 0.5s cubic-bezier(0.68, -0.6, 0.32, 1.6);
+  } 
+  /* 이렇게 한줄로 줄여쓸수 있으나 
+  앞에있는 숫자는 '전체시간', '뒤에는 딜레이 '이건 순서 고정임!!!  나머지 큐빅베이저,속성은 순서 바꿔도 됨*/
+
+   figure:hover img {
+    width: 500px;
+   }
+  </style>
+</head>
+
+<body>
+
+  <div class="box">
+
+  </div>
+  <hr>
+  <figure>
+    <img src="http://placehold.it/200x200" alt="">
+    <figcaption>image description</figcaption>
+  </figure>
+
+
+</body>
+
+</html>

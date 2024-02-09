@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selector 3</title>    
+    <style>
+/* 속성선택자 [속성명] 더 디텔하게 하려면 부모[속성명="어쩌구"] */
+       [target]{
+        text-decoration:none;
+       }
+       a[target="_blank"]{
+        background-color:silver;
+       }
+    /* 위 스타일태그가 더 우선순위라서 얘네는 포커스햇을떄 색안변함
+    나중에설명해주신다했음 */
+
+
+    /* a[class^="inner"]는 "시작하는 문자열이"라는 의미로 사용
+    a태그 중 class 속성값이 inner로 시작되는요소 선택
+
+    a[class$="inner"]는 "inner"로 끝나는 요소 선택   (위랑반대)
+
+    a[class*="inner"]는 inner문자열이 포함된 모든 요소 선택
+
+    a[class|="inner"]는 "inner"이거나 inner-로 구분되는 경우
+    */
+
+
+    /* a[class~="inner"] 은 해당속성에서 inner이 포함되어있는것 */
+    /* a[class|="inner"]{
+        font-weight:bold;
+       } */
+       a[class^="inner"]{
+        font-weight:bold;
+       }
+
+/* 의사 클래스 선택자 */
+
+       .title:hover{
+            color:blue; 
+       }
+    /* 마우스올리면 */
+       .link:hover{
+        background-color:blue;
+        color:#fff;
+       }
+     /* 눌럿던링크 */
+       .link:visited{
+            color:red;
+       }
+
+    /* 누르는 순간(누르는중에 보임) */
+       .link:active{
+            background-color:#000;
+            color:#fff;
+       }
+    /* 이건 a태그를 다 선택한것임  */
+       :link{
+        text-decoration:none;
+        outline: none;
+       }
+    /* class가 link로 지정된 것의 초점이동 */           
+       .link:focus{
+        background-color:blue;
+            color:#fff;
+       }
+    /* a링크 전체 초점이동 */
+        :link:focus{
+        background-color:blue;
+            color:#fff;
+       }
+
+       input,burtton{
+        outline:none;
+       }
+    /* 아래)이렇게 짜면x 버튼에만 포커징할때 보더 생김 */
+       /* input,button:focus{
+        border-color:blue;  
+        border-width:3px;       
+       } */
+
+       input:focus,button:focus{
+        border-color:blue;
+        border-width:3px;
+        }
+        /* 여기서 solid는 실선을 말함 */
+        form{
+            border:2px solid silver;
+            padding:10px;
+        }
+        /* (특이경우 원래 자식요소로 인해 부모요소를 바꿀수없음 얘만 이럼)
+        이 폼태그안에 자식요소중에 포커스가 걸리는애가 있으면
+         부모인 form을 바꿀수 있음*/
+        form:focus-within{
+            border-color:blue;
+        }
+
+/* 의사 요소 선택자 */
+/* 해당 class에 콘텐츠내역 앞,또는 뒤에 적용 */
+        .target:before{
+            content:'-';
+        }
+        .target:after{
+            content:'-';
+        }
+        
+    </style>    
+</head>
+<body>   
+    <h1>CSS selector</h1>
+    <h2>속성 선택자</h2>
+
+    <p>
+        <a href="" class="inner-sm">link</a>        
+        <a href="" target="_blank" class="innerbig">NAVER</a>
+        <a href="" target="_blank">DAUM</a>
+        <a href="" target="_self">Google</a>
+    </p>
+    <hr>
+    <h2 class="title">의사 클래스 선택자</h2>
+    <a href="" class="link">Link 1</a>          
+    <a href="#" class="link">Link 2</a>
+    <a href="" class="inner link">Link 3</a>
+    <form action="">
+        <input type="text">
+        <button>Send</button>
+    </form>
+    <hr>
+    <h2 class="target">의사 요소 선택자</h2>
+
+</body>
+</html>

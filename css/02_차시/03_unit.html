@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unit</title>    
+    <style>
+        /* class명을 css로 적을때는 .클래스명 치면 됨 */
+        .px {
+            width:200px;
+            background-color:silver
+        }
+
+        .px_parent {
+            width:300px;
+            background-color:silver
+        }
+
+        .px_child {
+            width:100px;
+            background-color:#ebebeb;
+        }
+
+/* px로 너비 잡은건 브라우저 크기상관없이 설정한 px고정이라 부모자식 영향없음.
+percent로 너비잡은건 브라우저 크기마다 달라지고 부모요소에 따라 비율이바뀜 */
+        .percent {
+            width:50%;
+            background:green;
+            color:#fff;
+        }
+        /* 위,아래) 부모인 body의 절반너비  */
+        .percent_parent {
+            width:50%;
+            background-color:silver;
+        }
+        /*아래) percent_child는 위 부모값(percent_parent)의 50%이라 똑같이적었지만 크기절반 */
+        .percent_child {
+            width:50%;
+            background-color:blue;
+            color:#fff;
+        }
+    
+/* 폰트사이즈는 설정안하면 기본 16px임  16x 1em= 16px */
+/* h2,p가 속한 부모요소인 section 사이즈를 설정하면 그게 em단위임 */
+        section {font-size:20px;}
+
+        section h2 {
+            font-size:1.5em;  /* 20x1.5 =30px*/
+        }
+        section p {
+            font-size:1.5em;  /* 20x1.5 =30px*/
+        }
+
+        section em{        /* em의 부모는 p라서 기본30x1.5 =45px*/
+            font-size:1.5em;
+        }
+/* rem은 root 기본값 비율이라 root사이즈를 변경하면
+다같이 변경되고, 서로 연관성은 없음*/
+        :root{
+            font-size:20px;
+        }         
+        
+        article h2{
+            font-size:1.5rem;                
+            }
+        article p{
+            font-size:1.5rem;                
+            }
+        article em{
+            font-size:1.5rem;                
+            }
+            
+/* width:100% 은 percent라 부모값 대비로 봐서 
+여기서는 body 영역만큼쓴다는것
+
+vw (viewport는 스크롤 영역까지 더 있기때문에 
+이때 같은 100vw지만 더 넓어짐*/
+          
+
+/* 마찬가지로 height 100%은 부모값 영향을 받기때문에
+%로 작성시 속한 body와, html height를 둘다 수정해야 하는 번거로움 이 있음 . 그러니 %쓰지말고 걍  100vh* 하면 편함/
+            /* html{
+                height:100%
+            }
+            body{
+                height:100%
+            } */
+/* 아래처럼 width 에 vh, heigh에 vw 줘도 됨 어차피 그 치수값을 적용하는거라.. */
+            .vw {
+                width:50vh;
+                background-color:green;
+                height:50vw;
+            }
+
+    </style>    
+</head>
+<body>   
+
+        <h1>단위</h1>
+    <h2 class="px">px</h2>
+    <div class="px_parent">
+        parent
+        <div class="px_child">child</div>
+    </div>
+    
+    <hr>
+    
+    <h2 class="percent">percent</h2>
+    <pre>percent는 부모(body)요소가 만들어준 공간에서 비율</pre>
+    
+    <div class="percent_parent">
+        parent
+        <div class="percent_child">child</div>
+    </div>
+    
+    <hr>
+    
+    <h2>em</h2>
+    <pre>
+        em 단위가 쓰여진 곳의 폰트 사이즈의 배수
+    </pre>
+
+    <section>
+        <h2>section title</h2>
+        <p>
+            <em>Lorem ipsum</em> dolor sit, amet consectetur adipisicing elit. Ea unde et laudantium ex, sint officiis nobis in illum quae magnam amet, fugit dolor ad consectetur voluptate voluptas sapiente, ullam corporis!
+        </p>
+    </section>
+
+    <h2>rem</h2>
+    <pre>
+        r = root = 문서의 기본값 16px
+    </pre>
+    <article>
+        <h2>article title</h2>
+        <p>
+            <em>Lorem ipsum</em> dolor sit amet consectetur adipisicing elit. Iusto, saepe quae? Pariatur neque similique nobis, accusamus omnis perspiciatis? Quos, earum. Laudantium et dolorum distinctio, alias illum sequi velit porro harum!
+        </p>
+    </article>
+    <hr>
+    <h2>vw</h2>
+    <pre>
+        v = viewport
+    </pre>
+
+    <div class="vw">vw</div>
+
+ 
+        <h2>vh</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis a consequuntur eos ea qui repellendus laudantium repudiandae placeat sapiente iusto voluptas quas libero suscipit possimus praesentium nostrum, accusantium, eum architecto!</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis a consequuntur eos ea qui repellendus laudantium repudiandae placeat sapiente iusto voluptas quas libero suscipit possimus praesentium nostrum, accusantium, eum architecto!</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis a consequuntur eos ea qui repellendus laudantium repudiandae placeat sapiente iusto voluptas quas libero suscipit possimus praesentium nostrum, accusantium, eum architecto!</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis a consequuntur eos ea qui repellendus laudantium repudiandae placeat sapiente iusto voluptas quas libero suscipit possimus praesentium nostrum, accusantium, eum architecto!</p>
+
+</body>
+</html>

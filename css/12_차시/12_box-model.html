@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Box Model</title>
+    <style>
+        .box {
+            width: 500px;        
+        }
+        .padding {
+            padding: 20px;
+        }
+        .border{
+            /* 요소가 차지하는 공간은 패딩+보더까지 포함임 */
+            border:10px solid silver;
+        }
+        .margin{
+            margin:10px;
+        }
+        .bg{
+            background-color: green;
+            color:#fff;
+        }
+
+        .content-box{
+            /* 기본값. 기본사이즈 지정하면 컨텐츠 값에 적용 */
+            box-sizing: content-box;
+        }
+            /* 보더 박스는 패딩+보더를 포함한 크기를 지정하는거라
+            컨텐츠의 크기값이 줄어듬  */
+        .border-box{
+            box-sizing: border-box;
+        }
+        .box2{
+            /* border:10px solid green; */
+            /* border-width: 10px 30px 50px; */
+            /* border-width: 0; */
+            /* border-top-width: 10px; */
+            border-width: 10px;
+            /* border-style: solid dotted dashed; */
+            /* border-top-style:solid; */
+            border-style: solid;
+            border-color: green silver blue;
+           
+           
+            width:500px;
+            padding: 20px;
+            /* padding:10px 50px 100px 20px;
+            padding:0 50px 0 0;
+            padding-left: 50px; 두개적음에러
+            상하좌우
+            상하, 좌우,  
+            상,좌우,하, 
+            상,우,하,좌*/
+            
+            /* margin:50px 100px 200px;            ?margin-top:-50px; */
+            /* margin-right:-200px; */
+            /* 위) 오른쪽여백주엇지만 밀리지않음. 모든요소는 왼쪽상단에 가려한다. */
+           
+           /* '너비가잇는'요소를 화면가운데에 두는 가장 효율적 방법 
+           (아래)*/
+            margin:0 auto;
+            h3{
+                display: inline-block;
+            }
+        }
+    </style> 
+</head>
+
+<body>
+    <h1>Box Model</h1>
+    <h2>content</h2>
+    <div class="box2">
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Distinctio asperiores aperiam quisquam, inventore est, necessitatibus cupiditate autem ad voluptatum enim facilis quaerat commodi odit suscipit repudiandae quas. Numquam, aperiam velit.</p>
+    </div>
+    <h3>title</h3>
+    <hr>
+    <div class="box content">
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sed aspernatur reprehenderit blanditiis velit
+            consectetur quibusdam, debitis similique earum cupiditate numquam! Enim, saepe. Aliquid veritatis ex eaque
+            voluptatibus earum. Repellat, non.</p>
+    </div>
+    <div class="box padding">
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sed aspernatur reprehenderit blanditiis velit
+            consectetur quibusdam, debitis similique earum cupiditate numquam! Enim, saepe. Aliquid veritatis ex eaque
+            voluptatibus earum. Repellat, non.</p>
+    </div>
+    <div class="box padding border">
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sed aspernatur reprehenderit blanditiis velit
+            consectetur quibusdam, debitis similique earum cupiditate numquam! Enim, saepe. Aliquid veritatis ex eaque
+            voluptatibus earum. Repellat, non.</p>
+    </div>
+    <div class="box padding border margin">
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sed aspernatur reprehenderit blanditiis velit
+            consectetur quibusdam, debitis similique earum cupiditate numquam! Enim, saepe. Aliquid veritatis ex eaque
+            voluptatibus earum. Repellat, non.</p>
+    </div>
+    <div class="box padding border margin bg">
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sed aspernatur reprehenderit blanditiis velit
+            consectetur quibusdam, debitis similique earum cupiditate numquam! Enim, saepe. Aliquid veritatis ex eaque
+            voluptatibus earum. Repellat, non.</p>
+    </div>
+    <hr>
+    <div class="box padding border margin content-box">
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sed aspernatur reprehenderit blanditiis velit
+            consectetur quibusdam, debitis similique earum cupiditate numquam! Enim, saepe. Aliquid veritatis ex eaque
+            voluptatibus earum. Repellat, non.</p>
+    </div>
+    <div class="box padding border margin border-box">
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sed aspernatur reprehenderit blanditiis velit
+            consectetur quibusdam, debitis similique earum cupiditate numquam! Enim, saepe. Aliquid veritatis ex eaque
+            voluptatibus earum. Repellat, non.</p>
+    </div>
+
+
+</body>
+
+</html>

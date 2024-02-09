@@ -1,0 +1,26 @@
+.wrap{
+	width: 500px;
+	margin:20px auto;
+	border:1px solid #3498db;
+	height: 500px;	
+}
+
+.wrap div{
+	width:100%;
+	background: #3498db;
+	color:#fff;
+	padding: 20px;
+	border:1px solid #fff;
+	box-sizing:border-box;
+	flex:1;
+	transition:0.5s;	
+}
+.wrap div:nth-child(1){
+		
+}
+.wrap div:nth-child(2){
+	
+}
+.wrap div:nth-child(3){	
+
+}

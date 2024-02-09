@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selector 2</title>    
+    <style>
+/* 자손선택자(공백) 자손누구든 + (.클래스명이든 h2 처럼 태그든 머든) */
+       header .title{
+        background:silver;
+    /* }
+아래> 이렇게 작성하면 모든 서브메뉴 a 까지 해당됨
+   nav ul li a{
+       background:silver;
+    } */
+/* }
+아래> 이렇게 해도 앞에 자손요소(공백) 이 있기떄문에 똑같이 전체해당
+nav ul li>a{
+    background:silver;
+ } */
+
+ /* 이게 자식 선택자! ( 바로밑에있는 자식만) */
+    }
+
+    nav>ul>li>a{
+    background:silver;
+    }
+/* 인접형제 선택자 (바로뒤에따라오는 첫째 만 ) */
+    section h1+ul{
+        background-color:silver;
+    }
+/* 일반형제 선택자 (바로뒤에따라오는 모든 ul) */
+    section h2~ul{
+        color:blue
+    }
+    </style>    
+</head>
+<body>   
+   <header>
+       <h1 class="title">Logo</h1>
+       <nav>
+           <ul>
+               <li><a href="">Menu</a>
+                    
+                <!--  ul>li*4>a{쓸내용$}  입력하면 숫자까지 쭈루룩 -->
+                    <ul>
+                        <li><a href="">sub-menu</a></li>
+                        <li><a href="">sub-menu</a></li>
+                    </ul>
+               </li>
+               <li><a href="">Menu</a></li>
+               <li><a href="">Menu</a></li>
+           </ul>
+       </nav>
+   </header>
+   <section>
+       <h1 class="title">Main section</h1>
+       <ul>
+           <li>menu1</li>
+           <li>menu2</li>
+           <li>menu3</li>
+       </ul>
+       <ul>
+        <li>menu4</li> </ul>
+
+       <h2>Main title</h2>
+       <ul>
+           <li>menu1</li>
+           <li>menu2</li>
+           <li>menu3</li>
+       </ul>
+       <h3>Sub title</h3>
+       <ul>
+           <li>menu1</li>
+           <li>menu2</li>
+           <li>menu3</li>
+       </ul>
+   </section>
+</body>
+</html>

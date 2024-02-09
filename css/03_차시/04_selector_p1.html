@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selector 1</title>    
+    <style>
+/* 태그선택자 *{} 는 전체선택,  h1 이런것들도 유일무이 구분되면 바로 적기 */
+     *{
+        font-size:16px;
+     }
+     h1{
+        font-size:1.5em;
+     }
+    
+     h2{
+        font-size:1.2em;
+     }
+
+/* id 선택자는 #아이디 */
+    #logo{
+        background:silver;
+    }
+
+/* class 선택자는 .클래스 */
+    .title{
+        color:green;
+    }
+/* class="small color"일 경우
+2개의 이름의 클래스에 속한것임 */
+    .small{
+        font-size:14px;
+    }
+
+    .color{
+        color:green;
+    }
+    .bold{
+        font-weight:bold;
+    }
+/*  수정시에 클라이언트가 색이나 글씨체같은걸 다 바꿔달라할때
+용이하려면 class를 써야함. id는 중복이 안되서 쓰면 id 하나하나 다바꿔야함 
+
+되도록 css 에서는 id 사용을 지양할 것!!!
+ (html에서 인풋,라벨이나 ..링크 어쩌구 할때만 쓰기)*/
+    /* #effect1{
+        font-size:14px;
+    }
+    #effect2{
+        font-size:14px;
+        color:green;
+    }
+    #effect3{
+        font-size:14px;
+        color:green;
+        font-weight:bold
+    } */
+
+    </style>    
+</head>
+<body>   
+   <h1 id="logo">heading 1</h1>
+   <h2>heading 2</h2>
+   <h2 class="title">heading 2</h2>
+   <h2 class="title">heading 2</h2>
+   <p class="small" id="effect1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae at pariatur hic, molestiae accusamus minus ipsam vero nam, odit id veritatis unde, officia repudiandae reiciendis! Modi praesentium soluta accusamus quia?</p>
+   <p class="small color" id="effect2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae at pariatur hic, molestiae accusamus minus ipsam vero nam, odit id veritatis unde, officia repudiandae reiciendis! Modi praesentium soluta accusamus quia?</p>
+   <p class="small color bold" id="effect3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae at pariatur hic, molestiae accusamus minus ipsam vero nam, odit id veritatis unde, officia repudiandae reiciendis! Modi praesentium soluta accusamus quia?</p>
+</body>
+</html>
