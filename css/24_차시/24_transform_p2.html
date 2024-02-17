@@ -1,23 +1,75 @@
 <!DOCTYPE html>
-<html lang="en" >
-<head>
-  <meta charset="UTF-8">
-  <title>transform part 2</title>
-	<style>
-       
-	</style>
-</head>
-<body>
-<pre>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+      <title>transform part 2</title>
+      <style>
+         figure {
+            position: relative;
+            width: 647px;
+            height: 478px;
+         }
+         /* figcaption {
+            position: absolute;
+         	 width: 0;
+			height: 0;
+			overflow: hidden;
+
+            left: 0;
+            right: 0;
+            bottom: 0;
+            top: 0;
+            background: rgba(0, 0, 0, 0);
+            color: #fff;
+            text-align: center;
+            line-height: 478px;
+            font-size: 2em;
+            transition: 0.5s;
+            transform: scale(0);
+            transform-origin: 0 50%;
+         }
+         figure:hover figcaption {
+            width: 100%;
+	height: 100%; 
+            transform: scale(1);
+            background: rgba(0, 0, 0, 0.8);
+         } */
+
+         img {
+            transition: 0.5s;
+            /* 중심점 */
+            /* transform-origin: left center; */
+            /* 호버전 원래는 세로로 새움 */
+            /* transform: perspective(500px) rotatey(90deg); */
+         }
+
+         figure:hover img {
+            /* 트랜스폼: 기준,확대Z,이동거리Z
+		순서 맞아야함 
+		*/
+            /* transform:perspective(1000px) scaleZ(2) translateZ(100px); */
+            /* transform:perspective(500px) rotateY(180deg); */
+            /* transform:skewy(-45deg); */
+            /* transform: skew(45deg,10deg); */
+            /* 호버시 문이 닫히는 느낌. */
+            /* transform: perspective(500px) rotatey(0deg); */
+			transform: matrix(-1,0.2,0,1,100,100);
+			/* 여기선 각도x 숫자만적음 */
+		
+		}
+
+		 
+      </style>
+   </head>
+   <body>
+      <pre>
     matrix(n,n,n,n,n,n);
     scaleX, skewY, skewX, scaleY, translateX, translateY
-</pre>
-<figure>
-	<img src="img/flower.jpg">
-	<figcaption>
-		photo description
-	</figcaption>
-</figure>
-
-</body>
+</pre
+      >
+      <figure>
+         <img src="../img/article_picture1.jpg" />
+         <figcaption>photo description</figcaption>
+      </figure>
+   </body>
 </html>
