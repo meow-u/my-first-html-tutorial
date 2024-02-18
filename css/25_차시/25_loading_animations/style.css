@@ -13,4 +13,80 @@
   width: 6rem;
   height: 6rem;
   margin:6rem auto; 
+  /* border: 1px solid blue; */
+}
+/* 스피너 안에 div중에 클래스명이 curve로 시작하는것 */
+.spinner div[class^="curve"]{
+/* border: 1px solid blue; */
+transform: rotate(135deg);
+animation: spin 4s infinite;
+}
+@keyframes spin{
+  0% {transform: rotate(135deg); opacity: 1;}
+  25% {opacity: 0.5;}
+  50% {transform: rotate(675deg); opacity: 1;}
+  75% {opacity: 0.5;}
+  100% {transform: rotate(135deg); opacity: 1;}
+}
+
+
+.curve_top_left{
+  width: 3rem; height: 3rem;
+  left: 0;top: 0;
+  border-top: 0.5rem solid blue; 
+  border-left:0.5rem solid blue;
+  border-top-left-radius: 100%;
+  transform-origin: 100% 100%;
+  /* border-left-top-radius 하면 틀림
+  순서는 상하 좌우 임  */
+}
+
+.curve_bottom_right{
+  width: 3rem; height: 3rem;
+  right: 0; bottom: 0;
+  border-bottom: 0.5rem solid blue;;
+  border-right: 0.5rem solid blue;;
+  border-bottom-right-radius: 100%;
+  transform-origin:0 0;
+}
+
+.curve_top_right{
+  width: 2rem; height: 2rem;
+  top: 1rem; right:1rem;
+  border-top: 0.5rem solid blue;
+  border-right: 0.5rem solid blue;;
+  border-top-right-radius: 100%;
+  transform-origin:0% 100%;
+}
+
+.curve_bottom_left{
+  width: 2rem; height: 2rem;
+  left: 1rem;bottom: 1rem;
+  border-bottom: 0.5rem solid blue;;
+  border-left: 0.5rem solid blue;;
+  border-bottom-left-radius: 100%;
+  transform-origin:100% 0%
+}
+
+.spinner div{
+  position: absolute;
+}
+
+.center_circle {
+width: 1.5rem;
+height: 1.5rem;
+background: blue;
+border-radius: 50%;
+left:50%;
+top:50%;
+/* 이미 앱솔루트라 트랜스 레이트로 이동.
+마영오안댐 */
+transform: translate(-50%, -50%);
+animation: pulse 2s infinite;
+}
+
+@keyframes pulse{
+  from {opacity: 1;}
+  50% {opacity: 0.5;}
+  to {opacity: 1;}
 }

@@ -63,45 +63,41 @@ a[class^="slide_"]:hover:after{
   left: 0;top: 0;right: 0;bottom: 0;
 }
 a[class*="underline"]{
-  border-bottom: none;
+  border-bottom:none;
   position: relative;
   overflow: hidden;
   display: inline-block;
 }
 a[class*="underline"]:after{
- content:'';
- position: absolute;
- /* top:100% 하니까 다고장남 */
- bottom: 0%;
- border-bottom:0.125em solid  #3498db;
- transition: 0.35s;
- left: 0;
- right: 0;
+  content:'';
+  position: absolute;
+  bottom:0;
+  border-bottom:0.125em solid #3498db;
+  transition:transform 0.35s;
+  left: 0;
+  right: 0; 
 }
-
 a.fade_in_underline{
   border-bottom:0.125em solid transparent;
-  transition: 0.3s;
+  transition:0.35s;
 }
-
 a.fade_in_underline:after{
   border:none;
-
 }
 a.fade_in_underline:hover{
-  border-color: #3498db;
+  border-color:#3498db;
 }
-a.underline_from_left:after{
-  transform: translateX(-100%);
+a.underline_from_left:after{  
+  transform:translateX(-100%);
 }
-a[class*="underline"]:hover:after{
-  transform: none;
-}
-
-a.underline_from_right:after{
-  transform: translateX(100%);
+a.underline_from_right:after{  
+  transform:translateX(100%);
 }
 
 a.underline_from_center:after{
-  transform: scaleX(0);
+  transform:scaleX(0);
+}
+
+a[class*="underline"]:hover:after{
+  transform:none;
 }
