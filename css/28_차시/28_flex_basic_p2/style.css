@@ -1,7 +1,12 @@
 .wrap{
 	width: 500px;
 	margin:20px auto;
+	display: flex;
 	border:1px solid #3498db;
+	/* justify-content: space-between; */
+	height: 500px;
+	justify-content: center;
+	align-items: flex-start;
 }
 
 .wrap div{
@@ -10,5 +15,6 @@
 	padding: 20px;
 }
 .wrap div:last-child{
-	
+	align-self: flex-end;
+	justify-self: center;
 }

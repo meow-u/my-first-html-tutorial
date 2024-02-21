@@ -1,10 +1,14 @@
 .wrap{
 	width: 500px;
 	margin:20px auto;
+	display: flex;
+	/* flex-direction: column-reverse; */
+	flex-wrap:wrap-reverse;
 
 }
 
 .wrap div{
+	width: 100%
 
 }
 .wrap div:first-child{
